@@ -8,10 +8,25 @@ public class ConsoleIOPractice
 	
 	public static void main(String[] args) 
 	{
+		//prompt and read
+		int age = intChecker("Age? ");
+		
+		System.out.println("Name? ");
+		String name = console.nextLine();
+		
+		System.out.println(name + " is " + age + " years old");
+	}
+	
+	public static void divide()
+	{
 		int numerator = intChecker("Enter a numerator: ");
 		int denominator = intChecker("Enter a denominator: ");
 		
+		//do some math, show some results
+		int divide = numerator / denominator;
+		int remainder = numerator % denominator;
 		
+		System.out.println("Results: " + divide + ", " + remainder);
 	}
 	
 	public static int intChecker(String prompt)
@@ -29,7 +44,7 @@ public class ConsoleIOPractice
 		}
 		
 		int value = console.nextInt();
-		System.out.println(value);
+		console.nextLine(); //clear the buffer
 		
 		return value;
 	}
