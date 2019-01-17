@@ -13,7 +13,5 @@ public class TestEmployees
 		//try to create a contractor
 		Contractor contractor = new Contractor("Jose Smith",
 				LocalDate.now(), "SDT", 50000, LocalDate.now());
-		
-		contractor.
 	}
 }
