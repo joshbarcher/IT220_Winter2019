@@ -1,6 +1,6 @@
 package shapes;
 
-public class Shape 
+public abstract class Shape 
 {
 	private String name;
 
@@ -18,6 +18,8 @@ public class Shape
 	{
 		this.name = name;
 	}
+	
+	public abstract double area();
 	
 	public String toString()
 	{

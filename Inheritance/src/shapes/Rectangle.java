@@ -23,8 +23,23 @@ public class Rectangle extends Shape
 		return width;
 	}
 	
+	public double area()
+	{
+		return length * width;
+	}
+	
+	public void printArea()
+	{
+		System.out.println(area());
+	}
+	
 	public String toString()
 	{
-		return "Rectangle [length=" + length + ", width=" + width + "]";
+		return super.toString() + " Rectangle [length=" + length + ", width=" + width + "]";
 	}
 }
+
+
+
+
+

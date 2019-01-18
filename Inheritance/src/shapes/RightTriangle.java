@@ -23,6 +23,11 @@ public class RightTriangle extends Shape
 		return height;
 	}
 	
+	public double area()
+	{
+		return 0.5 * base * height;
+	}
+	
 	public String toString()
 	{
 		return "RightTriangle [base=" + base + ", height=" + height + "]";
