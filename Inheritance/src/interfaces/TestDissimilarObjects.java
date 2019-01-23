@@ -14,5 +14,12 @@ public class TestDissimilarObjects
 		{
 			System.out.println(objects[i].toString());
 		}
+		
+		Liftable[] liftables = {ladder, shark};
+		
+		for (int i = 0; i < liftables.length; i++)
+		{
+			liftables[i].pickUp();
+		}
 	}
 }
