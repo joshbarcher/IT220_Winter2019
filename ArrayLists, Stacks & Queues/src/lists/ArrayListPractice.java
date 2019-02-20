@@ -1,10 +1,50 @@
-package examples;
+package lists;
 
 import java.util.ArrayList;
 
 public class ArrayListPractice
 {
 	public static void main(String[] args)
+	{
+		carefulWhenUsingArrayLists();
+	}
+	
+	private static void carefulWhenUsingArrayLists()
+	{
+		ArrayList<Integer> list = new ArrayList<Integer>();
+
+		for (int i = 1; i <= 1000000; i++)
+		{
+			list.add(i);
+		}
+		
+		//print the size
+		System.out.println(list.size());
+	}
+	
+	private static void removingElements()
+	{
+		ArrayList<String> list = new ArrayList<String>();
+
+		list.add("the");
+		list.add("story");
+		list.add("is");
+		list.add("at");
+		list.add("the end");
+		list.add("is");
+		list.add("at");
+		
+		//remove all elements
+		for (int i = list.size() - 1; i >= 0; i--)
+		{
+			list.remove(i);
+		}
+		
+		//print the size
+		System.out.println(list.size());
+	}
+	
+	private static void introductionToArrayLists()
 	{
 		//create a resizable list that keeps growing with new elements
 		ArrayList<String> list = new ArrayList<String>();
@@ -65,13 +105,5 @@ public class ArrayListPractice
 		{
 			System.out.println(i + ": " + list.get(i));
 		}
-	}
-	
-	private static void foo()
-	{
-		String[] array = new String[10]; //fixed size!!!
-		
-		array[0] = "Hello";
-		array[6] = "world";
 	}
 }
