@@ -1,5 +1,8 @@
 package bst;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree
 {
 	//fields
@@ -104,6 +107,79 @@ public class BinarySearchTree
 	public int size()
 	{
 		return size;
+	}
+	
+	public void inOrder()
+	{
+		inOrder(root);
+	}
+	
+	private void inOrder(Node current)
+	{
+		//left, node, right
+		if (current != null)
+		{
+			inOrder(current.left);
+			System.out.println(current.data);
+			inOrder(current.right);
+		}
+	}
+	
+	public void postOrder()
+	{
+		postOrder(root);
+	}
+	
+	private void postOrder(Node current)
+	{
+		//left, right, node
+		if (current != null)
+		{
+			postOrder(current.left);
+			postOrder(current.right);
+			System.out.println(current.data);
+		}
+	}
+	
+	public void preOrder()
+	{
+		preOrder(root);
+	}
+	
+	private void preOrder(Node current)
+	{
+		//node, left, right
+		if (current != null)
+		{
+			System.out.println(current.data);
+			preOrder(current.left);
+			preOrder(current.right);
+		}
+	}
+	
+	public void breadthFirstSearch()
+	{
+		Queue<Node> queue = new LinkedList<Node>();
+		
+		//add my root
+		queue.offer(root);
+		
+		while (!queue.isEmpty())
+		{
+			//pull the node off the queue and report it
+			Node next = queue.poll();
+			System.out.println(next.data);
+			
+			//put the children back on the queue
+			if (next.left != null)
+			{
+				queue.offer(next.left);
+			}
+			if (next.right != null)
+			{
+				queue.offer(next.right);
+			}
+		}
 	}
 	
 	private class Node

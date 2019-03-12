@@ -21,5 +21,8 @@ public class TestTrees
 		
 		//test a value that is not in the tree
 		System.out.println("found(20)? " + bst.contains(20));
+		System.out.println(); //new line...
+		
+		bst.breadthFirstSearch();
 	}
 }
